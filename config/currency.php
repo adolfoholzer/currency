@@ -25,6 +25,6 @@ return [
     | default currency is requested.
     |
     */
-    'default' => env('CURRENCY_DEFAULT', CurrencyType::PESO_URUGUAYO->value),
+    'default' => CurrencyType::PESO_URUGUAYO->value,
     
 ];
