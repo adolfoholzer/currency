@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Zitro\Currency\Enums\CurrencyType;
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Enabled currencies
@@ -25,4 +26,5 @@ return [
     |
     */
     'default' => env('CURRENCY_DEFAULT', CurrencyType::PESO_URUGUAYO->value),
+    
 ];
