@@ -6,6 +6,9 @@ use Zitro\Currency\Enums\CurrencyType;
 
 return [
 
+    // Default for testing
+    'placeholder' => 'default',
+
     /*
     |--------------------------------------------------------------------------
     | Enabled currencies

@@ -14,4 +14,4 @@ it('returns the same instance from the container', function () {
 
 it('merges the package config', function () {
     expect(config('currency.placeholder'))->toBe('default');
-})->skip();
+});
