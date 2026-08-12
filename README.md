@@ -36,7 +36,76 @@ php artisan vendor:publish --tag="currency-config"
 
 ## Usage
 
-<!-- Add a basic usage example here. -->
+### Getting the default currency
+
+```php
+use Zitro\Currency\Facades\Currency;
+
+$currency = Currency::default();
+```
+
+---
+
+### Using the enum
+
+```php
+use Zitro\Currency\Enums\CurrencyType;
+
+$currency = CurrencyType::USD;
+```
+
+Example:
+
+```php
+$currency->code();
+$currency->symbol();
+```
+
+---
+
+## Examples
+
+### Currency code
+
+```php
+CurrencyType::USD->code();
+
+// USD
+```
+
+---
+
+### Currency symbol
+
+```php
+CurrencyType::USD->symbol();
+
+// $
+```
+
+---
+
+### Comparing currencies
+
+```php
+if ($currency === CurrencyType::USD) {
+    //
+}
+```
+
+---
+
+## Available currencies
+
+The package currently supports the following currencies:
+
+| Currency | ISO Code |
+|----------|----------|
+| Uruguayan Peso | UYU |
+| US Dollar | USD |
+| Euro | EUR |
+
+> More currencies can easily be added by extending the `CurrencyType` enum.
 
 ## Changelog
 
