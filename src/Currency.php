@@ -17,13 +17,13 @@ class Currency
     {
         return config('currency.default', 'UYU');
     }
-    
+
     /**
      * Obtiene solo las monedas que el proyecto decidió habilitar.
      *
      * Filtra los casos del Enum CurrencyType basándose en el archivo de configuración.
      *
-     * @return array<string, \Zitro\Currency\Enums\CurrencyType> Array indexado por código que contiene las instancias del Enum.
+     * @return array<string, CurrencyType> Array indexado por código que contiene las instancias del Enum.
      */
     public function getEnabled(): array
     {
@@ -42,7 +42,7 @@ class Currency
     /**
      * Valida si una moneda específica está activa en este proyecto.
      *
-     * @param string $code El código de la moneda a validar (ej: 'USD', 'UYU').
+     * @param  string  $code  El código de la moneda a validar (ej: 'USD', 'UYU').
      * @return bool True si la moneda está habilitada, false en caso contrario.
      */
     public function isEnabled(string $code): bool

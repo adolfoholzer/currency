@@ -12,7 +12,7 @@ enum CurrencyType: string
 
     public function symbol(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PESO_URUGUAYO => '$',
             self::USD => 'USD',
             self::EURO => '€',
@@ -21,7 +21,7 @@ enum CurrencyType: string
 
     public function name(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PESO_URUGUAYO => 'Peso Uruguayo',
             self::USD => 'Dólar Estadounidense',
             self::EURO => 'Euro',

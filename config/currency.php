@@ -26,5 +26,5 @@ return [
     |
     */
     'default' => CurrencyType::PESO_URUGUAYO->value,
-    
+
 ];

@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Artisan;
 // Helper para limpiar el archivo de configuración clonado
 $cleanConfig = function () {
     $target = config_path('currency.php');
+
     if (file_exists($target)) {
         unlink($target);
     }
+
     return $target;
 };
 
